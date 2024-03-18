@@ -23,7 +23,7 @@ ul{
     border: 1px solid #333;
 }
 
-@media screen and (max-width 767px){
+@media screen and (max-width: 767px){
     .container{
         flex-direction: column;
     }
