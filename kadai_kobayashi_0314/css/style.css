@@ -16,7 +16,6 @@
 }
 .header_nav_list{
     display: flex;
-    justify-content: space-around;
 }
 .header_nav_list li{
     border-right: 1px solid #333;
