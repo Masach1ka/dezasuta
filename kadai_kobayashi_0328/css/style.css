@@ -20,6 +20,10 @@ h2 img{
 }
 
 /* ------------ ヘッダー ----------------  */
+.header_slider img {
+  width: 100%;
+}
+
 .header_wrap{
     display: flex;
     justify-content: space-between;
@@ -47,42 +51,150 @@ h2 img{
     font-weight: bold;
     font-size: 18px;
 }
+
+.pc_nav ul li{
+  color: #fff;
+  text-align: center;
+}
+.pc_nav ul li + li{
+  margin-left: 55px;
+}
+
+/* ---------- スマホメニュー --------- */
+.sp_nav, .sp_btn{
+  display: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .pc_nav{
+    display: none;
+  }
+  /* ハンバーガー */
+  .sp_btn{
+    display: block;
+    height: 23px;
+    cursor: pointer;
+    /* 位置の調整 */
+    position: absolute;
+    top: 20px;
+    right: 25px;
+      /* 重なり具合 */
+  z-index: 2;
+  }
+  .sp_btn span{ 
+    display: block;
+    width: 33px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #fff;
+    /* 位置の調整 */
+    position: relative;
+    top: 10px;
+    /* アニメーション*/
+    transition: 0.3s;
+  }
+
+  .sp_btn span::before,
+  .sp_btn span::after {
+    content: "";
+    display: block;
+    width: 33px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #fff;
+    /* 位置の調整 */
+    position: absolute;
+        /* アニメーション*/
+        transition: 0.3s;
+  }
+  .sp_btn span::before{
+    bottom: 10px;
+  }
+  .sp_btn span::after{
+    top: 10px;
+  }
+
+  /* ×印 */
+  .sp_btn.open span{
+    background: transparent;
+  }
+  .sp_btn.open span::before{
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  .sp_btn.open span::after{
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+
+  /* spメニューの見た目 */
+.sp_nav{
+  /* 画面の位置 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+   height: 100vh; /*デバイスの高さの100% */
+  background-color: rgba(0, 0, 0, 0.8);
+  /* 重なり具合 */
+  z-index: 1;
+}
+.sp_nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.sp_nav ul li{
+  padding: 20px;
+  color: #fff;
+  font: 18px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+  "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+}
+
+
+
+
+
+
 .top_section{
     text-align: center;
+    margin: 104px 0 93px 0;
 }
 .top_section>p:first-child {
-    margin: 107px 0 64px 0;
     font-size: 30px;
 }
 .top_section>p:nth-child(2) {
-    font-size: 80px;
+    font-size: 82px;
     line-height: 1.17;
     letter-spacing: 0.1em;
+    margin: 47px 0 20px;
 }
 .top_section>p:last-child {
     font-size: 23px;
     line-height: 1.65;
-    margin: 48px 0 100px 0;
 }
 
 /* ーーーーーーーー about ---------------*/
 .about_content {
   display: flex;
-  gap: 87px;
+  justify-content: space-between;
 }
 .about_content_img {
-  width: 50%;
+  max-width: 50%;
 }
 .about_content_box {
-  width: 41%;
+  max-width: 42%;
 }
 .about_content_img img {
     border-radius: 0 0 82px 0;
 }
 .about_content_box h2 {
   text-align: left;
-}
-.about_content_box h2 {
   margin-top: 56px;
 }
 .about_content_box h3 {
@@ -90,10 +202,12 @@ h2 img{
   color: #4f260a;
   line-height: 1.38;
   font-size: 44px;
+  font-weight: 400;
 
 }
 .about_content_box>p {
   line-height: 1.625;
+  font-size: 16px;
 }
 
 /*ーーーーーーーー menu ーーーーーーーーーー*/
@@ -102,8 +216,12 @@ section#menu h2 {
 }
 .menu-box {
   display: flex;
-  gap: 48px;
+  /* gap: 48px; */
   margin-top: 1.625em;
+  justify-content: space-between;
+}
+.menu-img{
+  max-width: 30%;
 }
 .menu-img> p {
   line-height: 1.56;
@@ -150,9 +268,16 @@ table {
   }
   .table_info th {
     padding-right: 56px;
+    font-weight: 400;
 }
 td {
   line-height: 2.8;
+}
+td a {
+  text-decoration: underline;
+}
+table th, td {
+  font-size: 23px;
 }
 
 /* ----------------- Access ---------------- */
