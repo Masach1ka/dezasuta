@@ -1,0 +1,428 @@
+@charset "utf-8";
+
+html {
+	scroll-behavior: smooth;
+    height: 100%;
+    margin: 0 auto;
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+
+/*---------------------------
+　　　　　　　共通
+----------------------------*/
+.section-wrap{
+    background-color: #DEDED8;
+    border-radius: 10px;
+}
+/* .section-wrap>.box{
+    display: flex;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 12em;
+} */
+
+
+
+/* ------------ ヘッダー ----------------  */
+.header_mv img{
+    width: 100%;
+}
+
+.header_wrap{
+    position: relative;
+}
+.header_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 3% 0 3%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.header_wrap img{
+    width: 226px;
+}
+
+.pc_nav ul{
+    display: flex;
+}
+.pc_nav ul li{
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    color: #E68309;
+    width: 105px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.pc_nav ul li{
+  color: #E68309;
+  text-align: center;
+}
+.pc_nav ul li + li{
+  margin-left: 55px;
+}
+
+.sp_nav, .sp_btn{
+    display: none;
+}
+
+
+  /* ---------------------
+          レスポンシブ 
+--------------------------*/
+
+
+  @media screen and (max-width: 1100px) {
+    .pc_nav{
+      display: none;
+    }
+    /* ハンバーガー */
+    .sp_btn{
+      display: block;
+      height: 23px;
+      cursor: pointer;
+      /* 位置の調整 */
+      position: absolute;
+      top: 20px;
+      right: 25px;
+        /* 重なり具合 */
+    z-index: 2;
+    }
+    .sp_btn span{ 
+      display: block;
+      width: 33px;
+      height: 3px;
+      border-radius: 2px;
+      background-color: #fff;
+      /* 位置の調整 */
+      position: relative;
+      top: 10px;
+      /* アニメーション*/
+      transition: 0.3s;
+    }
+  
+    .sp_btn span::before,
+    .sp_btn span::after {
+      content: "";
+      display: block;
+      width: 33px;
+      height: 3px;
+      border-radius: 2px;
+      background-color: #fff;
+      /* 位置の調整 */
+      position: absolute;
+          /* アニメーション*/
+          transition: 0.3s;
+    }
+    .sp_btn span::before{
+      bottom: 10px;
+    }
+    .sp_btn span::after{
+      top: 10px;
+    }
+  
+    /* ×印 */
+    .sp_btn.open span{
+      background: transparent;
+    }
+    .sp_btn.open span::before{
+      bottom: 0;
+      transform: rotate(45deg);
+    }
+    .sp_btn.open span::after{
+      top: 0;
+      transform: rotate(-45deg);
+    }
+  
+  /* ---------- スマホメニュー(mvのみ) --------- */
+    /* spメニューの見た目 */
+  .sp_nav{
+    /* 画面の位置 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+     height: 100vh; /*デバイスの高さの100% */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* 重なり具合 */
+    z-index: 1;
+  }
+  .sp_nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .sp_nav ul li{
+    padding: 20px;
+    color: #fff;
+    font: 18px;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  }
+  }
+
+
+
+/*----------------------------
+          aboutコンテンツ
+-----------------------------*/
+.about-cont {
+    height: 739px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.box{
+    display: flex;
+    gap: 12em;
+}
+.box-left {
+    width: 50%;
+}
+  .box-right {
+    width: 50%;
+}
+h2.title {
+    font-size: 97px;
+    color: #E68309;
+    padding: 120px 0  50px 120px;
+}
+.title-m {
+    color: #E68309;
+    margin: 0 0 16px 120px;
+}
+.box-left p {
+    line-height: 1.6;
+    margin: 0 0 16px 120px;
+}
+p.text-big {
+    font-size: 30px;
+    line-height: 2.2;
+    margin-top: -11em;
+    margin-bottom: 4em;
+}
+.btn_more{
+    width: 300px;
+    background:#E68309;;
+    padding: 15px;
+    border-radius: 30px;
+}
+.btn_more a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+}
+table.info {
+    margin: 0 0 0 120px;
+}
+th {
+    letter-spacing: 0.3em;
+    line-height: 1.8;
+}
+th.name {
+    letter-spacing: 0.4em;
+}
+
+
+/*-----------------------------
+     パララックス
+--------------------------------*/
+/* 
+.parallax {
+    box-sizing: border-box;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    height: 10%;
+    padding: 5%;
+  } */
+  .parallax-bg {
+    background-image: url('http://127.0.0.1:5500/img/pala-first-img.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 15%;
+}
+  .parallax-bg2 {
+    background-image: url('http://127.0.0.1:5500/img/pala-second-img.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 15%;
+  }
+
+
+
+/*----------------------------
+          worksコンテンツ
+-----------------------------*/
+
+.scrollbox {
+    height: 1031px;
+}
+.works-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+h2.ttl-works {
+    font-size: 97px;
+    text-align: center;
+    color: #e68309;
+    padding-top: 98px;
+    padding-bottom: 62px;
+}
+.works-flex-inner {
+    width: 32%;
+    margin-bottom: 49px;
+    text-align: center;
+}
+.works-flex-inner p {
+    margin-top: 14px;
+}
+
+/*------------------------
+　　　コンタクトフォーム
+------------------------*/
+h2.ttl-contact {
+    font-size: 97px;
+    text-align: center;
+    color: #e68309;
+    padding-top: 115px;
+    padding-bottom: 45px;
+}
+
+.contact-box{
+    max-width: 1100px;
+    margin: 0 auto;
+    height: 1252px;
+}
+.contact-txt {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 633px;
+    line-height: 1.75;
+    padding-bottom: 103px;
+}
+.c-form {
+	max-width: 736px;
+	margin: 0 auto;
+}
+.c-form__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 81px;
+}
+
+.c-form__label,
+.c-form__input {
+	padding: 10px;
+}
+.c-form__label {
+	width: 90%;
+}
+.c-form__input {
+    width: 90%;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+}
+
+.c-form__input:focus-visible {
+	outline: green auto 1px;
+}
+.c-form__required {
+	color: #fff;
+	background-color: green;
+	border-radius: 4px;
+	padding: 5px 5px;
+	margin: 0 0 0 18px;
+}
+textarea.c-form__input {
+	height: 94px;
+}
+.c-form__submit {
+	text-align: center;
+}
+.c-form__submit button {
+    width: 300px;
+    background: #E68309;
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    transition: .4s;
+    cursor: pointer;
+    border: none;
+}
+
+.c-form__submit button:hover {
+	/* color: #e68309;
+	background-color: transparent; */
+    opacity: 0.7;
+}
+/* 
+@media (min-width: 640px) {
+	.c-form__item {
+		flex-wrap: nowrap;
+	}
+	.c-form__label {
+		width: 40%;
+	}
+	.c-form__input {
+		width: 55%;
+	}
+} */
+
+
+/* -------------- 
+      footer 
+--------------- */
+footer {
+    background: #2B492B;
+    height: 194px;
+    position: relative
+}
+  .footer_section img {
+    max-height: 50px;
+    width: 226px;
+}
+.footer_copy {
+    padding-left: 4%;
+    font-size: 12px;
+    text-align: left;
+    color: #fff;
+    position: absolute;
+    bottom: 34px;
+}
+  
+/*----------------------
+   pagetop
+----------------------*/
+.pagetop{
+      position: fixed;
+      right: 47px;
+      bottom: 47px;
+      cursor: pointer;
+}
+  
+.pagetop img {
+      width: 100px;
+} 
+  
