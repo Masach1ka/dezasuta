@@ -8,11 +8,24 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.css" integrity="sha512-Woz+DqWYJ51bpVk5Fv0yES/edIMXjj3Ynda+KWTIkGoynAMHrqTcDUQltbipuiaD5ymEo9520lyoVOo9jCQOCA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js" integrity="sha512-Ixzuzfxv1EqafeQlTCufWfaC6ful6WFqIz4G+dWvK0beHw0NVJwvCKSgafpy5gwNqKmgUfIBraVwkKI+Cz0SEQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        (function(d) {
+          var config = {
+            kitId: 'aeo2zbm',
+            scriptTimeout: 3000,
+            async: true
+          },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+      </script>
 </head>
 <body>
     <header id="header">
@@ -26,21 +39,23 @@
         </div>
             <div class="header_wrap">
                 <h1 class="logo">
+                    <a href="index.html">
                     <img src="./img/logo@2x.png" alt="Altirsum">
+                </a>
                 </h1>
                 <nav class="pc_nav">
                     <ul>
-                        <li><a href="#about">about</a></li>
-                        <li><a href="#works">works</a></li>
-                        <li><a href="#contact">contact</a></li>
+                        <li><a href="./about/about.html">about</a></li>
+                        <li><a href="./works/works.html">works</a></li>
+                        <li><a href="#contact-form">contact</a></li>
                     </ul>
                 </nav>
                 <div class="sp_btn"><span></span></div>
                 <nav class="sp_nav">
                     <ul>
-                        <li><a href="#about">about</a></li>
-                        <li><a href="#works">works</a></li>
-                        <li><a href="#contact">contact</a></li>
+                        <li><a href="./about/about.html">about</a></li>
+                        <li><a href="./works/works.html">works</a></li>
+                        <li><a href="#contact-form">contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -50,7 +65,7 @@
         <!-- about -->
         <section class="section-wrap">
             <div class="about-cont">
-                <h2 class="title">about</h2>
+                <h2 class="ttl-about title">about</h2>
                 <div class="box">
                     <div class="box-left">
                         <div class="title-m">history</div>
@@ -84,7 +99,7 @@
                             共に歩んで、<br>
                             新しい価値を生み出せる<br>
                             そんな存在でありたい。</p>
-                        <div class="btn_more"><a href="#">続きをみる</a></div>
+                        <div class="btn_more"><a href="./about/about.html">続きをみる</a></div>
                     </div>
                 </div>
             </div>
@@ -99,7 +114,7 @@
           <!-- works -->
             <section class="section-wrap">
                 <div class="scrollbox">
-                    <h2 class="ttl-works">works</h2>
+                    <h2 class="ttl-works title">works</h2>
                     <div class="works-flex">
                     <div class="works-flex-inner">
                         <a href="#">
@@ -109,36 +124,37 @@
                     </div>
                     <div class="works-flex-inner">
                         <a href="#">
-                            <img src="/img/burger-pop-bnr.png" alt="">
+                            <img src="./img/burger-pop-bnr.png" alt="">
                         </a>
                         <p>飲食店バナーデザイン                        </p>
                     </div>
                     <div class="works-flex-inner">
                         <a href="#">
-                            <img src="/img/lp-design.png" alt="">
+                            <img src="./img/lp-design.png" alt="">
                         </a>
                         <p>LPデザイン</p>
                     </div>
                     <div class="works-flex-inner">
                         <a href="#">
-                            <img src="/img/travel-bnr.png" alt="">
+                            <img src="./img/travel-bnr.png" alt="">
                         </a>
                         <p>旅行バナーデザイン</p>
                     </div>
                     <div class="works-flex-inner">
                         <a href="#">
-                            <img src="/img/burger-bnr.png" alt="">
+                            <img src="./img/burger-bnr.png" alt="">
                         </a>
                         <p>ハンバーガーバナーデザイン</p>
                     </div>
                     <div class="works-flex-inner">
                         <a href="#">
-                            <img src="/img/shampoo-bnr.png" alt="">
+                            <img src="./img/shampoo-bnr.png" alt="">
                         </a>
                         <p>ヘアケアバナーデザイン</p>
                     </div>
                 </div>
                 </div>
+                <div class="btn_more"><a href="./about/about.html">続きをみる</a></div>
             </section>
 
 
@@ -150,34 +166,36 @@
 
         <!-- contact -->
             <section class="section-wrap">
+                <div id="contact-form">
                 <div class="contact-box">
-                    <h2 class="ttl-contact">contact</h2>
+                    <h2 class="ttl-contact title">contact</h2>
                     <p class="contact-txt">お仕事のご依頼、なんでもお気軽にご相談ください。いつだって何気ない会話から生まれるアイデアがあります。そんな声を是非、聞かせてください。
                     </p>
+                    <form action="
+                    https://docs.google.com/forms/u/0/d/e/1FAIpQLSe00eJN0CWayVTtmGW0ONrc6MT8bA5no3F9iHgbGwaOm18KRw/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
                     <form class="c-form">
                         <div class="c-form__item">
                             <label class="c-form__label" for="field-name">name</label>
-                            <input class="c-form__input" id="field-name" type="text" required="required"/>
+                            <input name="entry.690315515" class="c-form__input" id="field-name" type="text" required="required"/>
                         </div>
                         <div class="c-form__item">
                             <label class="c-form__label" for="field-mail">mail address</label>
-                            <input class="c-form__input" id="field-mail" type="email" required="required"/>
+                            <input name="entry.1489506358" class="c-form__input" id="field-mail" type="email" required="required"/>
                         </div>
                         <div class="c-form__item">
                             <label class="c-form__label" for="field-message">message</label>
-                            <textarea class="c-form__input" id="field-message"></textarea>
+                            <textarea name="entry.1726417427" class="c-form__input" id="field-message"></textarea>
                         </div>
                         <div class="c-form__submit">
                             <button type="submit">連絡する</button>
                         </div>
                     </form>
                     <div class="contact-img">
-                        <a href="./img/contact-ft.png"></a>
+                        <img src="./img/contact-ft.png">
                     </div>
                 </div>
-            </sectio>
-
- 
+                </div>
+            </section>
         </main>
 
         <footer class="footer">
@@ -223,6 +241,15 @@
                 });
             });
         </script>
+        <script type="text/javascript">
+            let submitted = false;
+        </script>
+        <iframe
+            name="hidden_iframe"
+            id="hidden_iframe"
+            style="display: none"
+            onload="if(submitted){window.location='THANKSページのURL';}"
+        ></iframe>
     
 </body>
 </html>
