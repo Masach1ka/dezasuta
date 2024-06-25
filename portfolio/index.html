@@ -33,9 +33,9 @@
             <div>
                 <picture>
                     <source srcset="images/jibun1.png" media="(max-width:767px)">
-                    <img src="./img/MV.png" alt="jibun">
+                    <img src="./img/MV.png" alt="about">
                 </picture>
-            </div>
+            </div>        
         </div>
             <div class="header_wrap">
                 <h1 class="logo">
@@ -45,16 +45,16 @@
                 </h1>
                 <nav class="pc_nav">
                     <ul>
-                        <li><a href="./about/about.html">about</a></li>
-                        <li><a href="./works/works.html">works</a></li>
+                        <li><a href="./about.html">about</a></li>
+                        <li><a href="./works.html">works</a></li>
                         <li><a href="#contact-form">contact</a></li>
                     </ul>
                 </nav>
                 <div class="sp_btn"><span></span></div>
                 <nav class="sp_nav">
                     <ul>
-                        <li><a href="./about/about.html">about</a></li>
-                        <li><a href="./works/works.html">works</a></li>
+                        <li><a href="./about.html">about</a></li>
+                        <li><a href="./works.html">works</a></li>
                         <li><a href="#contact-form">contact</a></li>
                     </ul>
                 </nav>
@@ -78,15 +78,15 @@
                         <div class="title-m">company</div>
                         <table class="info">
                             <tr>
-                                <th class="name">屋  号:</th>
+                                <th class="name">屋号</th>
                                 <td>Altruism（アルティリズム）</td>
                             </tr>
                             <tr>
-                                <th class="name">名  前:</th>
+                                <th class="name">名前</th>
                                 <td>小林 正央 Masachika Kobayashi</td>
                             </tr>
-                            <tr>
-                                <th>事業内容:</th>
+                            <tr valign="top">
+                                <th>事業内容</th>
                                 <td>Web制作におけるディレクション・デザイン・<br>コーディング・CMS導入</td>
                             </tr>
                         </table>
@@ -99,7 +99,7 @@
                             共に歩んで、<br>
                             新しい価値を生み出せる<br>
                             そんな存在でありたい。</p>
-                        <div class="btn_more"><a href="./about/about.html">続きをみる</a></div>
+                        <div class="btn_more"><a href="./about.html">続きをみる</a></div>
                     </div>
                 </div>
             </div>
@@ -118,7 +118,7 @@
                     <div class="works-flex">
                     <div class="works-flex-inner">
                         <a href="#">
-                            <img src="/img/mobile-bnr.png" alt="">
+                            <img src="./img/mobile-bnr.png" alt="">
                         </a>
                         <p>モバイルバナーデザイン</p>
                     </div>
@@ -153,8 +153,8 @@
                         <p>ヘアケアバナーデザイン</p>
                     </div>
                 </div>
-                </div>
-                <div class="btn_more"><a href="./about/about.html">続きをみる</a></div>
+                <div class="btn_more works"><a href="./about/about.html">続きをみる</a></div>
+            </div>
             </section>
 
 
@@ -171,20 +171,18 @@
                     <h2 class="ttl-contact title">contact</h2>
                     <p class="contact-txt">お仕事のご依頼、なんでもお気軽にご相談ください。いつだって何気ない会話から生まれるアイデアがあります。そんな声を是非、聞かせてください。
                     </p>
-                    <form action="
-                    https://docs.google.com/forms/u/0/d/e/1FAIpQLSe00eJN0CWayVTtmGW0ONrc6MT8bA5no3F9iHgbGwaOm18KRw/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
-                    <form class="c-form">
+                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd_HqM5UIevYTGRvAooAlfRdRCcrTC9RaHtLQSNp3UB0JzhHA/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
                         <div class="c-form__item">
                             <label class="c-form__label" for="field-name">name</label>
-                            <input name="entry.690315515" class="c-form__input" id="field-name" type="text" required="required"/>
+                            <input name="entry.1894024006" class="c-form__input" id="field-name" type="text" required="required"/>
                         </div>
                         <div class="c-form__item">
                             <label class="c-form__label" for="field-mail">mail address</label>
-                            <input name="entry.1489506358" class="c-form__input" id="field-mail" type="email" required="required"/>
+                            <input name="entry.676919769" class="c-form__input" id="field-mail" type="email" required="required"/>
                         </div>
                         <div class="c-form__item">
                             <label class="c-form__label" for="field-message">message</label>
-                            <textarea name="entry.1726417427" class="c-form__input" id="field-message"></textarea>
+                            <textarea name="entry.1943416616" class="c-form__input" id="field-message"></textarea>
                         </div>
                         <div class="c-form__submit">
                             <button type="submit">連絡する</button>
@@ -214,42 +212,15 @@
                 $('.sp_nav').fadeToggle()
                 $('.sp_btn').toggleClass('open');
                 })
-                $('.header_slider').slick({
-                     autoplay:true,  /* 自動で再生*/
-                    autoplaySpeed:4000, /*再生速度*/
-                    dots:true,  /*丸の表示*/
-                    arrows:false,
-                    infinite: true,
-                });
-                $('.gallery-item').slick({
-                     autoplay:true,  /* 自動で再生*/
-                    autoplaySpeed:4000, /*再生速度*/
-                    dots:true,  /*丸の表示*/
-                    // arrows:false,
-                    slidesToShow: 5,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    responsive: [
-                            {
-                            breakpoint: 767,//モニターの横幅が426px以下の見せ方
-                            settings: {
-                            slidesToShow: 1,//スライドを画面に1枚見せる
-                            slidesToScroll: 1,//1回のスクロールで1枚の写真を移動して見せる
-                            }
-                        }
-                    ]
-                });
             });
         </script>
         <script type="text/javascript">
             let submitted = false;
         </script>
-        <iframe
-            name="hidden_iframe"
-            id="hidden_iframe"
-            style="display: none"
-            onload="if(submitted){window.location='THANKSページのURL';}"
-        ></iframe>
-    
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){window.location='https://docs.google.com/forms/u/0/d/e/1FAIpQLSd_HqM5UIevYTGRvAooAlfRdRCcrTC9RaHtLQSNp3UB0JzhHA/formResponse';}"></iframe>
 </body>
 </html>
+
+<!-- <div jscontroller="sWGJ4b" jsaction="EEvAHc:yfX9oc;" jsname="WsjYwc" class="geS5n AgroKb oQYVNd Jj6Lae"><div jscontroller="v4y9Mc" jsaction="rcuQ6b:vZc4S;sPvj8e:d3sQLd;O22p3e:zjh6rb;AHmuwe:h06R8;b2trFe:eVidQc;"><div class="z12JJ"><div class="HoXoMd D1wxyf RjsPE" dir="auto" role="heading" aria-level="3"><span class="M7eMe">メールアドレス</span><span class="vnumgf" id="i4" aria-label="必須の質問"> *</span></div></div><div class="rFrNMe k3kHxc RdH0ib yqQS1 zKHdkd" jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV" jsshadow="" jsname="YPqjbf"><div class="aCsJod oJeWuf"><div class="aXBtI Wic03c"><div class="Xb9hP"><input type="email" class="whsOnd zHQkBf" jsname="YPqjbf" autocomplete="email" tabindex="0" aria-label="メールアドレス" aria-disabled="false" required="" dir="auto" data-initial-dir="auto" data-initial-value=""><div jsname="LwH6nd" class="ndJi5d snByac" aria-hidden="true">メールアドレス</div></div><div class="i9lrp mIZh1c"></div><div jsname="XmnwAc" class="OabDMe cXrdqd Y2Zypf" style="transform-origin: 65px center;"></div></div></div><div class="LXRPh"><div jsname="ty6ygf" class="ovnfwe Is7Fhb"></div></div></div></div><div jsname="Rfh2Tc" class="SL4Sz" id="i3" role="alert"><div class="rRld8e"><div class="foqfDc gdyQ3c"><div aria-hidden="true" class="Y0xAIe BNL9Bd NpcyEe-n5T17d-Bz112c-u0pjoe-i5vt6e-BvMwwf">&nbsp;</div><div aria-hidden="true" class="Y0xAIe ivmiLb NpcyEe-n5T17d-Bz112c-u0pjoe-i5vt6e-AhqUyc">&nbsp;</div><div aria-hidden="true" class="Y0xAIe tDDvMb NpcyEe-n5T17d-Bz112c-u0pjoe-i5vt6e-oq6NAc">&nbsp;</div></div></div><span class="RHiWt">この質問は必須です</span></div></div>
+<div jscontroller="v4y9Mc" jsaction="rcuQ6b:vZc4S;sPvj8e:d3sQLd;O22p3e:zjh6rb;AHmuwe:h06R8;b2trFe:eVidQc;"><div class="z12JJ"><div class="HoXoMd D1wxyf RjsPE" dir="auto" role="heading" aria-level="3"><span class="M7eMe">メールアドレス</span><span class="vnumgf" id="i4" aria-label="必須の質問"> *</span></div></div><div class="rFrNMe k3kHxc RdH0ib yqQS1 zKHdkd" jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV" jsshadow="" jsname="YPqjbf"><div class="aCsJod oJeWuf"><div class="aXBtI Wic03c"><div class="Xb9hP"><input type="email" class="whsOnd zHQkBf" jsname="YPqjbf" autocomplete="email" tabindex="0" aria-label="メールアドレス" aria-disabled="false" required="" dir="auto" data-initial-dir="auto" data-initial-value=""><div jsname="LwH6nd" class="ndJi5d snByac" aria-hidden="true">メールアドレス</div></div><div class="i9lrp mIZh1c"></div><div jsname="XmnwAc" class="OabDMe cXrdqd Y2Zypf" style="transform-origin: 65px center;"></div></div></div><div class="LXRPh"><div jsname="ty6ygf" class="ovnfwe Is7Fhb"></div></div></div></div>
+<div jsmodel="CP1oW" data-params="%.@.[1489506358,&quot;メールアドレス&quot;,null,0,[[310605352,null,true,null,null,null,null,null,null,null,[]]],null,null,null,null,null,null,[null,&quot;メールアドレス&quot;]],&quot;i9&quot;,&quot;i10&quot;,&quot;i11&quot;,false]"><div jscontroller="sWGJ4b" jsaction="EEvAHc:yfX9oc;" jsname="WsjYwc" class="geS5n"><div class="z12JJ"><div class="M4DNQ"><div id="i9" class="HoXoMd D1wxyf RjsPE" role="heading" aria-level="3" aria-describedby="i12"><span class="M7eMe">メールアドレス</span><span class="vnumgf" id="i12" aria-label="必須の質問"> *</span></div><div class="gubaDc OIC90c RjsPE" id="i10"></div></div></div><div jscontroller="oCiKKc" jsaction="rcuQ6b:vZc4S;O22p3e:zjh6rb;b2trFe:eVidQc;sPvj8e:d3sQLd;AHmuwe:h06R8;" class="AgroKb"><div class="rFrNMe k3kHxc RdH0ib yqQS1 zKHdkd" jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV" jsshadow="" jsname="YPqjbf"><div class="aCsJod oJeWuf"><div class="aXBtI Wic03c"><div class="Xb9hP"><input type="text" class="whsOnd zHQkBf" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-labelledby="i9" aria-describedby="i10 i11" aria-disabled="false" required="" dir="auto" data-initial-dir="auto" data-initial-value=""><div jsname="LwH6nd" class="ndJi5d snByac" aria-hidden="true">回答を入力</div></div><div class="i9lrp mIZh1c"></div><div jsname="XmnwAc" class="OabDMe cXrdqd"></div></div></div><div class="LXRPh"><div jsname="ty6ygf" class="ovnfwe Is7Fhb"></div></div></div></div><div jsname="Rfh2Tc" class="SL4Sz" id="i11" role="alert"></div></div></div> -->

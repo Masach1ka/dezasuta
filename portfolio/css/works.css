@@ -18,9 +18,9 @@ html {
   margin-top: 10px;
 }
 .ttl-works {
-  font-size: 97px;
-  text-align: center;
-  color: #e68309;
+    font-size: 97px;
+    text-align: center;
+    color: #e68309;
 }
 .title{
   font-family: "Quicksand", sans-serif;
@@ -50,11 +50,18 @@ height: 5%;
   font-weight: 600;
 }
 
-
-
 /* ------------ ヘッダー ----------------  */
-.header_mv img{
-    width: 100%;
+.header_mv {
+    width: 100vw;
+    height: 50vh;
+    position: relative
+}
+.header_mv_inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
 }
 
 .header_wrap{
@@ -108,14 +115,12 @@ nav.pc_nav ul li a {
   /* ---------------------
           レスポンシブ 
 --------------------------*/
-
-
-  @media screen and (max-width: 1100px) {
-    .pc_nav{
+@media screen and (max-width: 1100px) {
+.pc_nav{
       display: none;
-    }
-    /* ハンバーガー */
-    .sp_btn{
+}
+/* ハンバーガー */
+.sp_btn{
       display: block;
       height: 23px;
       cursor: pointer;
@@ -125,8 +130,8 @@ nav.pc_nav ul li a {
       right: 25px;
         /* 重なり具合 */
     z-index: 2;
-    }
-    .sp_btn span{ 
+}
+.sp_btn span{ 
       display: block;
       width: 33px;
       height: 3px;
@@ -137,10 +142,10 @@ nav.pc_nav ul li a {
       top: 10px;
       /* アニメーション*/
       transition: 0.3s;
-    }
+}
   
-    .sp_btn span::before,
-    .sp_btn span::after {
+.sp_btn span::before,
+.sp_btn span::after {
       content: "";
       display: block;
       width: 33px;
@@ -151,30 +156,30 @@ nav.pc_nav ul li a {
       position: absolute;
           /* アニメーション*/
           transition: 0.3s;
-    }
-    .sp_btn span::before{
+}
+.sp_btn span::before{
       bottom: 10px;
-    }
-    .sp_btn span::after{
+}
+.sp_btn span::after{
       top: 10px;
-    }
+}
   
-    /* ×印 */
-    .sp_btn.open span{
+/* ×印 */
+.sp_btn.open span{
       background: transparent;
-    }
-    .sp_btn.open span::before{
+}
+.sp_btn.open span::before{
       bottom: 0;
       transform: rotate(45deg);
-    }
-    .sp_btn.open span::after{
+}
+.sp_btn.open span::after{
       top: 0;
       transform: rotate(-45deg);
-    }
+}
   
-  /* ---------- スマホメニュー(mvのみ) --------- */
-    /* spメニューの見た目 */
-  .sp_nav{
+/* ---------- スマホメニュー(mvのみ) --------- */
+/* spメニューの見た目 */
+.sp_nav{
     /* 画面の位置 */
     position: absolute;
     top: 0;
@@ -184,91 +189,45 @@ nav.pc_nav ul li a {
     background-color: rgba(0, 0, 0, 0.8);
     /* 重なり具合 */
     z-index: 1;
-  }
-  .sp_nav ul {
+}
+.sp_nav ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
-  }
-  .sp_nav ul li{
+}
+.sp_nav ul li{
     padding: 20px;
     color: #fff;
     font: 18px;
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
     "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
-  }
-  }
-
-  /*------------------------
-　　　スキルセクション
-------------------------*/
-.skill-box {
-    padding: 0 210px;
-    height: 514px;
 }
-.skill-box h2 {
-    padding: 95px 0 86px;
-    font-size: 34px;
 }
-.skill-text {
-    display: flex;
-    justify-content: space-between;
-    font-size: 28px;
-}
-ul.skill-txt1 li {
-    line-height: 1.75;
-}
-ul.skill-txt2 li {
-    line-height: 1.75;
-}
-ul.skill-illust-top {
-    display: flex;
-    margin-bottom: 13px;
-}
-ul.skill-illust-bottom {
-    display: flex;
-}
-ul.skill-illust-top li {
-    padding: 0 13px;
-}
-ul.skill-illust-bottom li {
-    padding: 0 13px;
-}
-
 
 /*------------------------
-　　　ビジョンセクション
+　　　ワークスセクション
 ------------------------*/
-.vision-content{
-  height: 735px;
+section.works-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 252px;
 }
-.vision-inner {
-  max-width: 1100px;
-  margin: 0 auto;
+.works-content-inner {
+    padding: 127px 0 0;
 }
-h2.ttl {
-  font-size: 97px;
-  text-align: center;
-  color: #e68309;
-  padding-top: 98px;
-  padding-bottom: 62px;
+h2.main-works-title {
+    margin-top: 32px;
+    font-size: 18px;
 }
-.vision-flex {
-  display: flex;
-  justify-content: space-evenly;
+ul.main-works-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
-.flex-left {
-  width: 450px;
-  text-align: center;
-}
-.flex-right {
-  width: 550px;
-}
-.flex-right p {
-  line-height: 1.83;
-}
+
+
 /*------------------------
 　　　コンタクトフォーム
 ------------------------*/
@@ -300,7 +259,7 @@ h2.ttl-contact {
 }
 .contact-img {
   position: absolute;
-  bottom: -2%;
+  bottom: -3%;
   width: 100vw;
   margin: 0 calc(50% - 50vw);
 }
@@ -329,18 +288,20 @@ footer {
     position: absolute;
     bottom: 34px;
 }
-  /*----------------------
+
+/*----------------------
    pagetop
 ----------------------*/
 .pagetop {
-  position: fixed;
-  right: 47px;
-  bottom: 47px;
-  cursor: pointer;
-  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
+    position: fixed;
+    right: 47px;
+    bottom: 47px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
 }
 
 .pagetop img {
     width: 100px;
 } 
+

@@ -129,7 +129,7 @@ height: 5%;
       width: 33px;
       height: 3px;
       border-radius: 2px;
-      background-color: #fff;
+      background-color: #543d2b;
       /* 位置の調整 */
       position: relative;
       top: 10px;
@@ -144,7 +144,7 @@ height: 5%;
       width: 33px;
       height: 3px;
       border-radius: 2px;
-      background-color: #fff;
+      background-color: #543d2b;
       /* 位置の調整 */
       position: absolute;
           /* アニメーション*/
@@ -226,24 +226,30 @@ height: 5%;
   padding: 124px 0 51px 0;
 }
 .title-m {
-    color: #E68309;
-    /* margin: 0 0 16px 120px; */
+  color: #E68309;
+  margin-bottom: 16px;
 }
 .box-left p {
-    line-height: 1.6;
-    /* margin: 0 0 16px 120px; */
+  line-height: 2;
+  margin-bottom: 16px;
+  letter-spacing: 0.18em;
 }
 p.text-big {
-    font-size: 30px;
-    line-height: 2.2;
-    margin-top: -5.5em;
-    margin-bottom: 4em;
+  font-size: 30px;
+  line-height: 2.2;
+  margin-top: -11.5em;
+  margin-bottom: 7em;
 }
 .btn_more{
     width: 300px;
     background:#E68309;;
     padding: 15px;
     border-radius: 30px;
+}
+.btn_more.works {
+  margin: auto;
+  margin-right: 8em;
+  margin-top: 4em;
 }
 .btn_more a::after {
   content: "";
@@ -260,18 +266,15 @@ p.text-big {
     display: block;
     text-align: center;
 }
-/* table.info {
-    margin: 0 0 0 120px;
-} */
+tr {
+  line-height: 1.8;
+}
 th {
-    letter-spacing: 0.3em;
-    line-height: 1.8;
     text-align-last: justify;
 }
-th.name {
-    letter-spacing: 0.4em;
+td::before {
+  content: ":";
 }
-
 
 /*-----------------------------
      パララックス
@@ -398,7 +401,8 @@ textarea.c-form__input {
 	height: 94px;
 }
 .c-form__submit {
-	text-align: center;
+  text-align: center;
+  position: relative;
 }
 .c-form__submit button {
     width: 300px;
@@ -413,19 +417,33 @@ textarea.c-form__input {
     border: none;
     font-family: fot-tsukubrdgothic-std, sans-serif;
 }
-
+button::after {
+  content: "";
+  position: absolute;
+  background: url(../img/asiato.png) no-repeat center;
+  background-size: auto;
+  width: 35px;
+  height: 30px;
+  left: 60%;
+  top: 22%;
+}
 .c-form__submit button:hover {
 	/* color: #e68309;
 	background-color: transparent; */
     opacity: 0.7;
 }
 
-.contact-img{
+.contact-img {
   position: absolute;
-  bottom: -7px;
+  bottom: -1%;
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
 }
-/* 
-@media (min-width: 640px) {
+.contact-img img{
+  width: 99%;
+}
+
+/* @media (min-width: 640px) {
 	.c-form__item {
 		flex-wrap: nowrap;
 	}
@@ -435,7 +453,7 @@ textarea.c-form__input {
 	.c-form__input {
 		width: 55%;
 	}
-} */
+}  */
 
 
 /* -------------- 
@@ -462,11 +480,13 @@ footer {
 /*----------------------
    pagetop
 ----------------------*/
-.pagetop{
-      position: fixed;
-      right: 47px;
-      bottom: 47px;
-      cursor: pointer;
+.pagetop {
+  position: fixed;
+  right: 47px;
+  bottom: 47px;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
 }
   
 .pagetop img {
