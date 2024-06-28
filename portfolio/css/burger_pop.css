@@ -91,15 +91,9 @@ html {
 
 /* ------------ ヘッダー ----------------  */
 .header_mv {
-    width: 100vw;
-    height: 50vh;
-    position: relative
+    width: 100%;
 }
 .header_mv_inner {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     white-space: nowrap;
     width: 100%;
 }
@@ -323,14 +317,17 @@ h2.ttl-contact {
   border-radius: 30px;
   margin: 0 auto;
 }
+.footer-wrapper{
+    position: relative;
+}
 .contact-img {
-  position: absolute;
-  bottom: -3%;
-  width: 100vw;
-  margin: 0 calc(50% - 50vw);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 95%;
 }
 .contact-img img{
-  width: 100%;
+    width: 100%;
 }
 
 

@@ -27,16 +27,17 @@ html {
 .btn_more{
   width: 300px;
   background:#E68309;;
-  padding: 15px;
   border-radius: 30px;
 }
 .btn_more a::after {
-content: "";
-position: absolute;
-background: url(../img/asiato.png)no-repeat center;
-background-size: auto;
-width: 10%;
-height: 5%;
+  content: "";
+  position: absolute;
+  background: url(../img/asiato.png)no-repeat center;
+  background-size: auto;
+  width: 100%;
+  height: 100%;
+  left: 30%;
+  bottom: 0;
 }
 .btn_more a {
   color: #fff;
@@ -44,13 +45,16 @@ height: 5%;
   font-weight: 600;
   display: block;
   text-align: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
-/* .section-wrap>.box{
-    display: flex;
-    max-width: 1100px;
-    margin: 0 auto;
-    gap: 12em;
-} */
+
+@media screen and (max-width: 1000px) {
+  
+}
 
 
 
@@ -240,32 +244,13 @@ p.text-big {
   margin-top: -11.5em;
   margin-bottom: 7em;
 }
-.btn_more{
-    width: 300px;
-    background:#E68309;;
-    padding: 15px;
-    border-radius: 30px;
-}
+
 .btn_more.works {
   margin: auto;
   margin-right: 8em;
   margin-top: 4em;
 }
-.btn_more a::after {
-  content: "";
-  position: absolute;
-  background: url(../img/asiato.png)no-repeat center;
-  background-size: auto;
-  width: 10%;
-  height: 5%;
-}
-.btn_more a {
-    color: #fff;
-    font-size: 20px;
-    font-weight: 600;
-    display: block;
-    text-align: center;
-}
+
 tr {
   line-height: 1.8;
 }
@@ -279,15 +264,6 @@ td::before {
 /*-----------------------------
      パララックス
 --------------------------------*/
-/* 
-.parallax {
-    box-sizing: border-box;
-    color: #FFF;
-    display: flex;
-    align-items: center;
-    height: 10%;
-    padding: 5%;
-  } */
   .parallax-bg {
     background-image: url('../img/pala-first-img.png');
     background-attachment: fixed;
@@ -425,25 +401,29 @@ button::after {
   width: 35px;
   height: 30px;
   left: 60%;
-  top: 22%;
+  top: 25%;
 }
 .c-form__submit button:hover {
 	/* color: #e68309;
 	background-color: transparent; */
     opacity: 0.7;
 }
-
+.footer-wrapper{
+  position: relative;
+}
 .contact-img {
+  width: 100%;
   position: absolute;
-  bottom: -1%;
-  width: 100vw;
-  margin: 0 calc(50% - 50vw);
+  left: 0;
+  bottom: 95%;
 }
 .contact-img img{
-  width: 99%;
+  width: 100%;
 }
 
-/* @media (min-width: 640px) {
+
+
+@media (min-width: 640px) {
 	.c-form__item {
 		flex-wrap: nowrap;
 	}
@@ -453,7 +433,7 @@ button::after {
 	.c-form__input {
 		width: 55%;
 	}
-}  */
+} 
 
 
 /* -------------- 
@@ -492,4 +472,122 @@ footer {
 .pagetop img {
       width: 100px;
 } 
-  
+/* .pc { display: block !important; }
+.sp { display: none !important; } */
+
+/* ---------------------
+          レスポンシブ 
+--------------------------*/
+
+@media screen and (max-width: 767px) {
+/* 
+  .pc { display: none !important; }
+  .sp { display: block !important; } */
+
+.header_wrap img {
+    width: 116px;
+    padding-top: 10%;
+    padding-left: 10%;
+}
+.ttl-about {
+  font-size: 30px;
+  color: #E68309;
+  text-align: center;
+  padding: 3em 0;
+  display: block;
+}
+p.text-big {
+  font-size: 19px;
+  line-height: 1.38;
+}
+
+/* about */
+.about-cont {
+  height: 987px;
+}
+.box {
+  display: block;
+}
+.box-left {
+  width: auto;
+}
+.box-right {
+  width: auto;
+}
+
+/* work */
+.scrollbox {
+  height: 2000px;
+}
+.works-flex {
+  display: block;
+}
+.works-flex-inner {
+  width: 100%;
+  margin-bottom: 50px;
+  text-align: center;
+}
+h2.ttl-works {
+  font-size: 30px;
+  padding: 2em 0;
+}
+.btn_more.works {
+  margin: 0 auto;
+  padding: 15px;
+}
+
+/* パララックス */
+.parallax-bg {
+  background-image: url('../img/pala-first-img-sp.png');
+  padding: 35%;
+}
+.parallax-bg2 {
+  background-image: url('../img/pala-second-img-sp.png');
+  padding: 35%;
+}
+
+/* コンタクトセクション */
+h2.ttl-contact {
+  font-size: 30px;
+  text-align: center;
+  color: #e68309;
+  padding-top: 3em;
+  padding-bottom: 1.6em;
+}
+.contact-box {
+  max-width: none;
+  margin: 0;
+  height: 1050px;
+  position: relative;
+}
+.contact-txt {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 310px;
+  line-height: 1.75;
+  padding-bottom: 2.8em;
+}
+button::after {
+  left: 65%;
+}
+
+/* フッター */
+footer {
+  background: #2B492B;
+  height: 54px;
+  position: relative;
+}
+.footer_copy {
+  bottom: 10px;
+}
+
+/* ページトップ */
+.pagetop {
+  right: 17px;
+  bottom: 13px;
+}
+.pagetop img {
+  width: 28px;
+  height: 28px;
+}
+}

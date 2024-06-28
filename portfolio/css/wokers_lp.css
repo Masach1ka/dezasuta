@@ -39,17 +39,23 @@ html {
     position: absolute;
     background: url(../img/asiato.png)no-repeat center;
     background-size: auto;
-    width: 10%;
-    height: 5%;
-}
-.btn_more a {
-      color: #fff;
-      font-size: 24px;
-      text-align: center;
-      display: block;
-      font-weight: 600;
-}
-
+    width: 100%;
+    height: 100%;
+    left: 30%;
+    bottom: 0;
+  }
+  .btn_more a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
 .btn_more_prv {
     width: 225px;
     background: #E68309;
@@ -91,15 +97,9 @@ html {
 
 /* ------------ ヘッダー ----------------  */
 .header_mv {
-    width: 100vw;
-    height: 50vh;
-    position: relative
+    width: 100%;
 }
 .header_mv_inner {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     white-space: nowrap;
     width: 100%;
 }
@@ -252,45 +252,92 @@ nav.pc_nav ul li a {
 /*------------------------
 　　　テキストセクション
 ------------------------*/
-.works-contents {
+/* .works-contents {
     max-width: 1100px;
     padding: 0 60px;
     margin: 0 auto;
+} */
+section.works-contents {
+    margin-bottom: 10em;
+}
+section.wokers-section {
+    background-color: #DEDED8;
+    border-radius: 10px;
+    height: 3220px;
+}
+.wokers-section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
 }
 .works-content-wrap {
-    padding-top: 55px;
+    margin-top: 10em;
+}
+.wokers-pc {
+    padding: 7.5em  5em  5em;
+}
+.workers-sp {
+    padding: 5em 5em 7.5em;
+}
+.works-content-category {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    padding-bottom: 2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+span {
+    padding-right: 10px;
+}
+.works-content-category p:first-child {
+    width: 100%;
+}
+.works-content-category p:last-child {
+    width: 100%;
+    text-align: end;
+}
+.overview-text {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 10em;
+}
+.overview-text {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+.flex-left {
+    width: 100%;
+}
+.flex-right {
+    width: 100%;
+}
+.flex-right p {
+    margin-top: 1.56em;
+}
+.flex-right p {
+    margin-top: 1.56em;
+    line-height: 2;
 }
 table.text-info {
     margin-bottom: 20px;
 }
-th.designname {
-    padding-right: 13px;
-    border-right: 1px solid #333;
-}
-td.designdate {
-    padding-left: 13px;
-}
-.point-text {
-    display: flex;
-    margin-bottom: 70px;
-}
-h2.works-title {
-    font-size: 30px;
-    margin-bottom: 70px;
-}
-h3.point-text-title {
-    width: 30%;
-    font-size: 18px;
-}
+
 .content-info th {
-    width: 46%;
-    padding: 20px 0;
+    width: 35%;
+    padding: 10px 0;
     text-align: left;
 }
 .column_btn {
     display: flex;
     justify-content: space-between;
-    margin: 122px 0 203px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 7.5em;
+    border-bottom: 2px solid #333;
 }
 
 
@@ -323,14 +370,17 @@ h2.ttl-contact {
   border-radius: 30px;
   margin: 0 auto;
 }
+.footer-wrapper{
+    position: relative;
+}
 .contact-img {
-  position: absolute;
-  bottom: -3%;
-  width: 100vw;
-  margin: 0 calc(50% - 50vw);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 95%;
 }
 .contact-img img{
-  width: 100%;
+    width: 100%;
 }
 
 

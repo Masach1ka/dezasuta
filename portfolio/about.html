@@ -5,14 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
-        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="./css/reset.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.css" integrity="sha512-Woz+DqWYJ51bpVk5Fv0yES/edIMXjj3Ynda+KWTIkGoynAMHrqTcDUQltbipuiaD5ymEo9520lyoVOo9jCQOCA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="../css/about.css">
+        <link rel="stylesheet" href="./css/about.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js" integrity="sha512-Ixzuzfxv1EqafeQlTCufWfaC6ful6WFqIz4G+dWvK0beHw0NVJwvCKSgafpy5gwNqKmgUfIBraVwkKI+Cz0SEQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -32,14 +32,14 @@
               <div class="header_mv">
                   <div>
                       <picture>
-                          <source srcset="images/jibun1.png" media="(max-width:767px)">
+                          <source srcset="./img/mv-about-sp.png" media="(max-width:767px)">
                           <img src="./img/mv-about.png" alt="about">
                       </picture>
                   </div>
               </div>
                   <div class="header_wrap">
                       <h1 class="logo">
-                        <a href="/index.html">
+                        <a href="./index.html">
                           <img src="./img/logo@2x.png" alt="Altirsum">
                         </a>
                       </h1>
@@ -124,56 +124,32 @@
                   <p class="contact-txt">お仕事のご依頼、なんでもお気軽にご相談ください。いつだって何気ない会話から生まれるアイデアがあります。そんな声を是非、聞かせてください。
                   </p>
                   <div class="btn_more"><a href="/#contact-form">連絡する</a></div>
-                  <div class="contact-img">
-                      <img src="./img/contact-ft.png">
-                  </div>
               </div>
           <!-- </section> -->
       </main>
-              </main>
 
+      <div class="footer-wrapper">
+        <div class="contact-img">
+            <img src="./img/contact-ft.png" alt="森の画像">
+        </div>
               <footer class="footer">
                 <p class="footer_copy"><small>&copy;Masachika Kobayashi</small></p>
             </footer>
+      </div>
             <div class="pagetop">
                 <a href="#header">
                     <img src="./img/pagetop.png" alt="TOPへ戻る">
                 </a>
             </div>
               
-              <!-- <script>
+              <script>
                 $(function() {
                 $('.sp_btn').on('click',function() {
                     $('.sp_nav').fadeToggle()
                     $('.sp_btn').toggleClass('open');
                     })
-                    $('.header_slider').slick({
-                         autoplay:true,  /* 自動で再生*/
-                        autoplaySpeed:4000, /*再生速度*/
-                        dots:true,  /*丸の表示*/
-                        arrows:false,
-                        infinite: true,
-                    });
-                    $('.gallery-item').slick({
-                         autoplay:true,  /* 自動で再生*/
-                        autoplaySpeed:4000, /*再生速度*/
-                        dots:true,  /*丸の表示*/
-                        // arrows:false,
-                        slidesToShow: 5,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        responsive: [
-                                {
-                                breakpoint: 767,//モニターの横幅が426px以下の見せ方
-                                settings: {
-                                slidesToShow: 1,//スライドを画面に1枚見せる
-                                slidesToScroll: 1,//1回のスクロールで1枚の写真を移動して見せる
-                                }
-                            }
-                        ]
-                    });
                 });
-            </script> -->
+            </script>
             <script type="text/javascript">
                 let submitted = false;
             </script>

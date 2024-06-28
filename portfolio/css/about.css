@@ -31,23 +31,30 @@ html {
 .btn_more{
   width: 300px;
   background:#E68309;;
-  padding: 15px;
   border-radius: 30px;
 }
+
 .btn_more a::after {
-content: "";
-position: absolute;
-background: url(../img/asiato.png)no-repeat center;
-background-size: auto;
-width: 10%;
-height: 5%;
+  content: "";
+  position: absolute;
+  background: url(../img/asiato.png)no-repeat center;
+  background-size: auto;
+  width: 100%;
+  height: 100%;
+  left: 30%;
+  top: 0%;
 }
 .btn_more a {
   color: #fff;
-  font-size: 24px;
-  text-align: center;
-  display: block;
+  font-size: 20px;
   font-weight: 600;
+  display: block;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 
@@ -298,11 +305,14 @@ h2.ttl-contact {
   border-radius: 30px;
   margin: 0 auto;
 }
+.footer-wrapper{
+  position: relative;
+}
 .contact-img {
+  width: 100%;
   position: absolute;
-  bottom: -2%;
-  width: 100vw;
-  margin: 0 calc(50% - 50vw);
+  left: 0;
+  bottom: 95%;
 }
 .contact-img img{
   width: 100%;
@@ -344,3 +354,118 @@ footer {
 .pagetop img {
     width: 100px;
 } 
+
+/* ---------------------
+          レスポンシブ 
+--------------------------*/
+
+@media screen and (max-width: 767px) {
+  
+.header_wrap img {
+      width: 116px;
+      padding-top: 10%;
+      padding-left: 10%;
+}
+.ttl-about {
+    font-size: 30px;
+    color: #E68309;
+    text-align: center;
+    padding: 3em 0;
+    display: block;
+}
+p.text-big {
+    font-size: 19px;
+    line-height: 1.38;
+}
+  
+/* スキルセクション */
+.skill-box {
+  padding: 0 20px;
+  height: 570px;
+}
+.skill-box h2 {
+  padding: 2em 0;
+  font-size: 24px;
+  text-align: center;
+}
+.skill-text {
+  display: block;
+  font-size: 20px;
+  text-align: center;
+}
+.skill-illust {
+  margin-top: 1em;
+}
+ul.skill-illust-top {
+  display: flex;
+  margin-bottom: 13px;
+  justify-content: center;
+}
+ul.skill-illust-bottom {
+  display: flex;
+  justify-content: center;
+}
+h2.ttl {
+  font-size: 30px;
+  text-align: center;
+  color: #e68309;
+  padding: 1.7em 0;
+}
+.vision-flex {
+  display: block;
+}
+.flex-left {
+  width: auto;
+  text-align: center;
+}
+.flex-right {
+  width: auto;
+  padding: 4em 2em;
+}
+
+
+/* コンタクトセクション */
+h2.ttl-contact {
+    font-size: 30px;
+    text-align: center;
+    color: #e68309;
+    padding-top: 3em;
+    padding-bottom: 1.6em;
+}
+.contact-box {
+  max-width: none;
+  margin: 0;
+  height: 570px;
+  position: relative;
+}
+.contact-txt {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 310px;
+    line-height: 1.75;
+    padding-bottom: 2.8em;
+}
+  button::after {
+    left: 65%;
+}
+  
+  /* フッター */
+footer {
+    background: #2B492B;
+    height: 54px;
+    position: relative;
+}
+.footer_copy {
+    bottom: 10px;
+}
+  
+/* ページトップ */
+.pagetop {
+    right: 17px;
+    bottom: 13px;
+}
+.pagetop img {
+    width: 28px;
+    height: 28px;
+}
+}
